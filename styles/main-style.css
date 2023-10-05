@@ -1,0 +1,1772 @@
+ /* =============
+ table of contents
+===============
+
+
+1- header for desktop
+ 1.1  main-ul
+ 1.2  sup-ul
+ 1.3  search and other
+
+
+ 2- bottom header
+ 2.1 box model
+
+ 3- section our - team 
+
+ 4- section our working 
+ 5- section PRICING
+
+ 6- section contact
+ 
+ 7-Footer
+
+ END content
+
+----------------------------------->
+
+  /* =============
+screens media
+===============
+
+
+ 1-medie for big screen min width 1800px 
+
+ 2-media for small screens 950 to 1200  
+
+ 3- medie for tab screens 650 to 949 
+
+ 4-more medie for tab screens from 650 : 750 px
+ ----------------------------------------------------------------------------------------->
+ note :: thats mean my main style target from 1171 to 1799 that cuz my screen is 1440px
+  ----------------------------------------------------------------------------------------->
+*/
+
+
+ /* -------------------------------------------------- >>>>*/
+
+ /* 0. global style */
+
+ :root {
+     --mainColor: #009688;
+     --sColor: #fff;
+     --backGround-color: rgb(0, 0, 0);
+     --newColor: rgb(93, 190, 182);
+ }
+
+ @media (min-width:648px) {
+     .head-mobile {
+         display: none;
+     }
+ }
+
+
+ /* =============
+1- header for desktop
+===============*/
+ .head-main {
+     height: fit-content;
+     background-color: var(--backGround-color);
+     display: flex;
+     justify-content: space-between;
+     align-content: center;
+     position: sticky;
+     top: 0px;
+     z-index: 99999;
+     opacity: .94;
+ }
+
+
+
+ /* =============
+1.1  main-ul
+===============*/
+
+ .main-ul {
+     display: flex;
+     list-style: none;
+     height: 100%;
+     text-transform: capitalize;
+     padding: 0px;
+ }
+
+
+ .main-li>a {
+     padding: 15px 30px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 17.77px;
+ }
+
+ .main-li>a:hover {
+     color: var(--backGround-color);
+     background-color: var(--sColor);
+     font-weight: 900;
+     letter-spacing: .5px;
+ }
+
+ .lego a {
+     background-color: var(--mainColor);
+     padding: 15px 40px;
+ }
+
+ .fa-house {
+     font-size: 13px;
+     position: absolute;
+     left: 14px;
+     top: 17.5px;
+ }
+
+ .lego>a:hover,
+ .drop-down>a:hover {
+     background-color: #cccccc;
+ }
+
+ .drop-down {
+     position: relative;
+
+ }
+
+ .drop-down::after {
+     content: "";
+     position: absolute;
+     right: 11px;
+     top: 44%;
+     border-width: 6.7px;
+     border-style: solid;
+     border-color: #fff transparent transparent transparent;
+ }
+
+
+ .drop-down:hover .sup-ul {
+     display: block;
+ }
+
+ .drop-down:hover::after {
+     border-top-color: black;
+ }
+
+
+ /* =============
+1.2  sup-ul
+===============*/
+
+ .sup-ul {
+     width: 110%;
+     position: absolute;
+     top: 99%;
+     text-transform: capitalize;
+     list-style: none;
+     text-align: left;
+     text-indent: 0px;
+     padding: 0px;
+     border-top: 3px solid var(--mainColor);
+     border-radius: 3.7px;
+     display: none;
+     z-index: 999;
+
+ }
+
+
+
+ .sup-ul li>a {
+     padding: 15px 25px;
+     display: block;
+     font-size: 17px;
+     color: black;
+     background-color: #eee;
+
+ }
+
+ .sup-ul a:hover {
+     background-color: #c3c3c3;
+     letter-spacing: .7px;
+     font-weight: 900;
+ }
+
+ .drop-down:has(.sup-ul):hover {
+     background-color: #cccccc;
+ }
+
+ .sup-ul:hover+a {
+     color: black;
+     font-weight: 900;
+     letter-spacing: .5px;
+ }
+
+ /* =============
+1.3  search and other
+===============*/
+ .right-header-search {
+     display: flex;
+     flex-flow: row-reverse nowrap;
+     width: 30%;
+     align-items: center;
+ }
+
+
+ .search {
+     display: none;
+     margin-right: 25px;
+     border: 2px solid transparent;
+     outline: none;
+     border-radius: 7px;
+     padding: 7.5px 12.3px;
+     caret-color: var(--mainColor);
+     width: 100%;
+ }
+
+ .search:focus {
+     transition: .6s;
+     border: 2px solid var(--mainColor);
+
+ }
+
+ #search-show:checked+.search {
+     display: block;
+     animation: search 1.33s 1;
+ }
+
+ @keyframes search {
+     from {
+         opacity: 0;
+     }
+
+     to {}
+ }
+
+
+ #search-show {
+     display: none;
+ }
+
+ .fa-magnifying-glass {
+     font-size: 20.4px;
+     color: #fff;
+     margin-right: 16.2px;
+     cursor: pointer;
+ }
+
+
+
+ /* end header */
+
+
+ /* =============
+2- bottom header
+===============*/
+
+ .bottom-header {
+     height: auto;
+     position: relative;
+ }
+
+ .bottom-header img {
+     max-height: 670px;
+     min-height: 315px;
+     width: 100%;
+ }
+
+ .bottom-header>label a {
+     background-color: var(--backGround-color);
+     color: #fff;
+     padding: 11px 19px;
+     font-size: 29px;
+     border-radius: 9px;
+     position: absolute;
+     bottom: 70px;
+     left: 26px;
+     border: none;
+     outline: none;
+     cursor: pointer;
+     opacity: .94;
+
+ }
+
+ .bottom-header>label a:hover {
+     opacity: .88;
+     letter-spacing: .2px;
+     font-weight: bold;
+ }
+
+ /* =============
+2.1 box-model
+===============*/
+
+ .box-model {
+     height: 150px;
+     width: 40%;
+     color: #fff;
+     position: absolute;
+     top: 20%;
+     left: 30%;
+     display: none;
+     font-family: 'Cairo', sans-serif;
+ }
+
+ .head-box-model {
+     background-color: var(--mainColor);
+     padding: 23px;
+     font-weight: 900;
+     font-size: 1.1rem;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+
+ }
+
+ .main-box-model {
+     padding: 12px 23px;
+     background-color: var(--sColor);
+     opacity: 1;
+     color: black;
+     border-bottom-left-radius: 5px;
+     border-bottom-right-radius: 5px;
+ }
+
+ .main-box-model p {
+     line-height: 1.62;
+ }
+
+ .main-box-model a {
+     color: var(--mainColor);
+     margin-right: 20px;
+     font-size: 20px;
+     font-weight: 700;
+     text-decoration: underline 1.4px;
+ }
+
+ .fa-x {
+     position: absolute;
+     left: 12px;
+     top: 18px;
+     padding: 6px 10px;
+     border-radius: 5px;
+ }
+
+ .fa-x:hover {
+     background-color: #ddd;
+     cursor: pointer;
+     color: black;
+     transform: scale(1.15);
+ }
+
+ #show-model {
+     display: none;
+ }
+
+
+ /* end bottom header */
+
+
+
+ /* ====================
+ 3- section our - team 
+=================*/
+
+
+ .team {
+     display: flex;
+     flex-flow: column nowrap;
+     height: auto;
+     margin-top: 50px;
+     justify-content: space-around;
+     align-content: center;
+     background-color: #eee;
+
+ }
+
+ .up-team {
+     text-align: center;
+ }
+
+ .up-team>h2 {
+     font-size: 2rem;
+     margin: 24px 0px 12px 0px;
+     font-weight: 600;
+     text-transform: uppercase;
+ }
+
+ .up-team p {
+     font-size: 1.05rem;
+     opacity: .8;
+ }
+
+
+ .down-team {
+     margin-top: 15px 0px;
+     display: flex;
+     flex-flow: row wrap;
+     align-items: center;
+     justify-content: space-evenly;
+ }
+
+ .down-team h2 {
+     font-size: 1.3rem;
+ }
+
+ .down-team figure {
+     width: 150px;
+     height: 150px;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .down-team figure img {
+     border-radius: 50%;
+     height: 100%;
+     width: 100%;
+     opacity: .985;
+ }
+
+ .down-team img:hover {
+     opacity: 1;
+ }
+
+
+ .down-team div {
+     height: 210px;
+     display: flex;
+     flex-flow: column nowrap;
+     width: 23%;
+     text-align: center;
+     align-items: center;
+     justify-content: space-between;
+     margin-top: 35px;
+
+ }
+
+ .down-team div>P {
+     opacity: .88;
+ }
+
+ /* end sction our team  */
+
+
+ /* ====================
+ 4- section our working 
+======================*/
+ .our-work {
+     padding: 17.5px;
+     height: 625px;
+     background-color: #363636;
+     margin-top: 92px;
+     display: flex;
+     justify-content: space-between !important;
+     align-items: center;
+ }
+
+ .left-our-work {
+     width: 25%;
+     height: 474px;
+     color: #fff;
+     line-height: 1.65;
+
+ }
+
+
+ .left-our-work h2 {
+     font-size: 2rem;
+     margin-bottom: 22px;
+ }
+
+ .right-our-work {
+     width: 75%;
+     display: flex;
+     justify-content: space-around;
+
+ }
+
+ .right-our-work div {
+     width: 31%;
+     border-radius: 6px;
+     background-color: #fff;
+     height: 472px;
+ }
+
+ .right-our-work>div:hover {
+     transform: scale(1.03);
+     border-radius: 9px;
+     box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .2);
+ }
+
+ .right-our-work>div:hover img {
+     height: 49.37%;
+     border-radius: 10px;
+ }
+
+ .right-our-work div img {
+     width: 100%;
+     height: 47%;
+     border-radius: 5px;
+ }
+
+ .right-our-work h3 {
+     font-size: 1.5rem;
+     text-indent: 10px;
+     margin: 12px 0px;
+ }
+
+ .right-our-work p {
+     text-indent: 14px;
+     font-size: 1.15rem;
+     margin-top: 5px;
+     line-height: 1.33;
+ }
+
+ .right-our-work>div>p:first-of-type {
+     font-size: 1.4rem;
+     margin: 10px 0px;
+     opacity: .9;
+ }
+
+ .test {
+     ::selection {
+         background-color: #9e5721;
+
+     }
+ }
+
+ .test-1 {
+     ::selection {
+         background-color: #12d15b;
+
+     }
+
+
+ }
+
+ /* end sction our working  */
+
+
+
+ /* ==============
+5- section PRICING
+==============*/
+ .pricing {
+
+     text-align: center;
+     margin-top: 28px;
+     height: auto;
+ }
+
+ .text-accent {
+     font-size: 2.5rem;
+     font-weight: 900;
+     text-transform: uppercase;
+     margin-top: 2em;
+     margin-bottom: 7px;
+     color: #00A1AB;
+
+ }
+
+ .fs-500 {
+     font-size: 1.22rem;
+     opacity: .88;
+     margin: 12px 0px;
+ }
+
+ .mb {
+     margin: .25em 0em 1em;
+ }
+
+ .plans {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 1.62px;
+     margin: 2em 0;
+ }
+
+ .plan {
+     width: 17.5rem;
+     padding: 2em;
+     border-radius: 1.11em;
+     margin: .5em 1.618em 1.1em;
+ }
+
+ .plan--light {
+     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.21), 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 -4px 10px 2px rgb(221, 221, 221, .8);
+     color: #4E4E4E;
+     background: linear-gradient(-45deg, #E5E3E8, #FAFAFA);
+ }
+
+
+ .plan--light .plan-price {
+     color: #00A1AB;
+ }
+
+ .plan--light .btn {
+     color: #FFF;
+     background: #4E4E4E;
+ }
+
+ .plan--accent {
+     color: #FFF;
+     background: linear-gradient(-45deg, #05a4af, #028172);
+
+ }
+
+ .plan--light:hover {
+     transform: scale(1.011);
+     transition: 161ms;
+
+ }
+
+ .plan--accent:hover {
+     transition: 161ms;
+     transform: scale(1.016);
+     box-shadow: 2px 3px 15px 3px rgb(95, 216, 224), 0px 0px 6px 0px rgba(59, 228, 208, 0.81);
+ }
+
+ .plan--accent .plan-description p {
+     color: #fff;
+     font-weight: 500;
+ }
+
+ .plan--accent .btn {
+     color: #4E4E4E;
+     background: #FFF;
+ }
+
+ .plan-title {
+     text-transform: uppercase;
+     margin: 0 0 1em;
+ }
+
+ .plan-price {
+     margin: 0;
+     font-size: 3rem;
+     line-height: 1;
+     font-weight: 900;
+ }
+
+ .plan-price span {
+     display: block;
+     font-size: 1.5625rem;
+     font-weight: 300;
+ }
+
+ .plan-description>p {
+     margin: 1em 0;
+     line-height: 1.4;
+     font-size: 1.12rem;
+     font-weight: 800;
+     color: #000;
+     opacity: .85;
+     text-align: left;
+ }
+
+ .plan-description>span {
+     display: inline;
+     font-weight: 600;
+     opacity: .89;
+     position: relative;
+     top: -40px;
+     left: 40px;
+     font-size: 1.1rem;
+     text-align: left;
+ }
+
+ .btn {
+     display: inline-block;
+     padding: 0.6em 0.8em;
+     border-radius: 0.25em;
+     text-transform: uppercase;
+     text-decoration: none;
+     font-weight: 700;
+     color: #FFF;
+     background: #00A1AB;
+     transition: 0.31s;
+ }
+
+ .btn:hover {
+     opacity: 0.8;
+     letter-spacing: .5px;
+     font-weight: bolder;
+ }
+
+ .btn-mb {
+     margin-bottom: 2.8em;
+ }
+
+ .btn--light {
+     color: #4E4E4E;
+     background: #FFF;
+ }
+
+ .btn--dark {
+     color: #FFF;
+     background: #4E4E4E;
+ }
+
+ .fa-check {
+     color: rgb(2, 112, 2);
+     font-size: 1.1rem;
+ }
+
+ /* end pricing */
+
+
+ /* ================
+ 6- section contact
+==============*/
+
+ /* a.left */
+ .contact {
+     background-color: #f6f6f6;
+     height: 400px;
+     display: flex;
+     flex-wrap: nowrap;
+     justify-content: center;
+     text-indent: 8px;
+ }
+
+ .empty-1 {
+     background-color: #f6f6f6;
+     height: 90px;
+ }
+
+ .left-contact {
+     display: flex;
+     flex-flow: column nowrap;
+     height: auto;
+     width: 43.5%;
+     height: 400px;
+ }
+
+ .left-contact h2 {
+     width: fit-content;
+     padding: 8px 0px;
+     margin: 9px 0px;
+     border-bottom: 5px solid var(--mainColor);
+     font-weight: 600;
+ }
+
+ .left-contact h3 {
+     font-size: 1.35rem;
+     margin: 18px 0px;
+     font-weight: 600;
+ }
+
+ .left-contact p:first-of-type {
+     margin: 10px 0px 15px;
+     font-size: 1.22rem;
+     opacity: .88;
+
+ }
+
+ .info {
+     margin: 12px 0px;
+     font-size: 1.05rem;
+     line-height: 1.6;
+     text-transform: capitalize;
+     text-indent: 4px;
+ }
+
+ .info i {
+     color: var(--mainColor);
+     margin-right: 1.6px;
+ }
+
+ .info a {
+     color: black;
+ }
+
+ /* b.right */
+
+ .right-contact {
+     display: flex;
+     flex-flow: column nowrap;
+     height: 78%;
+     width: 55%;
+     padding: 22px 25px;
+     background-color: #fff;
+     border-radius: 10px;
+     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.21), 0 4px 20px 0 rgba(0, 0, 0, 0.2);
+ }
+
+ .right-contact:hover {
+     box-shadow: 0px 0px 34px 15px #bbb;
+ }
+
+ #submit {
+     background-color: var(--backGround-color);
+     color: var(--sColor);
+     width: 16%;
+     padding: 9px 4px;
+     border: none;
+     margin-top: 12px;
+     float: right;
+     border-radius: 5px;
+ }
+
+ #submit:hover {
+     opacity: .87;
+     letter-spacing: 1.2;
+     font-weight: 900;
+     font-size: 1.02rem;
+ }
+
+ .right-contact label {
+     display: block;
+     font-size: 1.17rem;
+     font-weight: 600;
+     margin: 4.5px 0px 11.4px;
+ }
+
+ .right-contact label span {
+     color: red;
+     position: relative;
+     bottom: 3px;
+     right: 2px;
+     opacity: .5;
+ }
+
+ .right-contact input {
+     width: 100%;
+     outline: none;
+     padding: 10px 5px;
+     border: 2px solid transparent;
+     caret-color: var(--mainColor);
+     border-radius: 3.8px;
+
+ }
+
+ .right-contact input:focus {
+     transition: .786s;
+     border: 2px solid rgb(231, 99, 51);
+ }
+
+ ::placeholder {
+     opacity: .9;
+     font-size: .9rem;
+ }
+
+
+ /* end section contact */
+
+ /* ================
+7-Footer
+==============*/
+
+ .footer-img {
+     width: 100%;
+     min-height: 350px;
+     max-height: 700px;
+     filter: grayscale(45%);
+ }
+
+ footer {
+     background-color: var(--backGround-color);
+     color: var(--sColor);
+     height: 200px;
+     margin-top: -4px;
+     text-align: center;
+     position: relative;
+ }
+
+ footer h3 {
+     font-size: 1.5rem;
+     width: fit-content;
+     margin: 0px auto;
+     transform: translateY(110%);
+ }
+
+ .main-icons {
+     display: flex;
+     flex-flow: row nowrap;
+     width: 100%;
+     justify-content: center;
+     align-items: center;
+     transform: translateY(110%);
+     margin: 1.7px 0px;
+ }
+
+ .main-icons div {
+     margin: 0px 3.5px;
+ }
+
+ .main-icons div i {
+     background-color: var(--mainColor);
+     padding: 7px 9px;
+     font-size: 22px;
+     border-radius: 5px;
+ }
+
+ .fa-circle-chevron-up {
+     font-size: 32.3px;
+     color: #fff;
+     position: absolute;
+     right: 32px;
+     top: calc(50% - 25px);
+ }
+
+ .fa-circle-chevron-up:hover {
+     transition: .22s;
+     transform: translatex(-3.15px);
+ }
+
+
+ .main-icons div>i:hover {
+     background-color: var(--sColor);
+     color: var(--mainColor);
+     font-size: 23.5px;
+     cursor: pointer;
+ }
+
+ footer p {
+     transform: translateY(350%);
+     font-size: .92rem;
+ }
+
+ /* footer>p>span {
+     color: black;
+     font-size: 1rem;
+     margin: 0px 1.62px;
+     padding: 3.5px 0px;
+     cursor: default;
+ }
+
+ footer p span:hover {
+     color: #fff;
+     transition: .82s;
+ } */
+
+ /* end footer  */
+
+ /* END CONTENT  */
+
+ /* =============
+screens media
+===============*/
+
+ /* medie for big screen min width 1800px  */
+
+
+ @media (min-width:1799px) {
+     header {
+         height: 75px;
+     }
+
+     .main-li>a {
+         padding: 27.5px 50px;
+         font-size: 22px;
+         font-weight: 500;
+     }
+
+     .lego a {
+         padding: 27.5px 67.7px;
+     }
+
+     .fa-house {
+         font-size: 19.2px;
+         position: absolute;
+         left: 30px;
+         top: 30px;
+     }
+
+     .drop-down::after {
+         right: 20px;
+         top: 50%;
+         border-width: 7.88px;
+     }
+
+     @keyframes drop-down {
+         to {
+             margin-top: 140px;
+
+         }
+     }
+
+
+     .sup-ul li>a {
+         padding: 28px 40px;
+         font-size: 18.5px;
+         line-height: 1;
+     }
+
+     .right-header-search {
+         width: 30%;
+     }
+
+     .fa-magnifying-glass {
+         font-size: 22.2px;
+         color: #fff;
+         margin-right: 20px;
+     }
+
+     .search {
+         margin-right: 31px;
+         border-radius: 7px;
+         padding: 10px 12px;
+         width: 98%;
+         font-size: 1.17rem;
+         font-weight: 600;
+         letter-spacing: .6px;
+     }
+
+
+     /* ----------------------> */
+
+     .up-team h2 {
+         font-size: 2.3rem;
+         margin: 24px 0px 12px 0px;
+         font-weight: 600;
+         text-transform: uppercase;
+     }
+
+     .up-team p {
+         font-size: 1.22rem;
+
+     }
+
+     .down-team {
+         margin-top: 25px 0px;
+     }
+
+     .down-team figure {
+         width: 225px;
+         height: 225px;
+         margin-bottom: 19px;
+
+     }
+
+     .down-team div {
+         height: auto;
+         width: 24.5%;
+         margin-top: 40px;
+     }
+
+     .down-team div>p {
+         font-size: 1.5rem;
+     }
+
+     /* ----------------------> */
+
+     .our-work {
+         padding: 22px;
+         height: 650px;
+         margin-top: 105px;
+     }
+
+     .left-our-work {
+         width: 26%;
+         height: 546px;
+         line-height: 1.72;
+
+     }
+
+     .left-our-work h2 {
+         font-size: 2.33rem;
+         margin-bottom: 23.3px;
+     }
+
+     .left-our-work p {
+         font-size: 1.15rem;
+     }
+
+     .right-our-work {
+         width: 75%;
+
+     }
+
+     .right-our-work div {
+         width: 31.7%;
+         border-radius: 7px;
+         height: 545px;
+         max-width: 420px;
+     }
+
+
+     .right-our-work>div:hover img {
+         height: 49.77%;
+     }
+
+     .right-our-work div img {
+         height: 48%;
+         border-radius: 7px;
+     }
+
+     .right-our-work h3 {
+         font-size: 1.62rem;
+     }
+
+     .right-our-work p {
+         text-indent: 14px;
+         font-size: 1.33rem;
+         margin-top: 5.8px;
+         line-height: 1.62;
+     }
+
+     /* ----------------------> */
+
+     .pricing {
+
+         margin-top: 32px;
+     }
+
+     .plans {
+         gap: 32.4px;
+         margin: 2.75em 0;
+     }
+
+     .plan {
+         width: 18.5rem;
+         padding: 2.1em;
+         border-radius: 1.13em;
+         height: 105%;
+     }
+
+     .btn {
+         padding: 0.7em 0.85em;
+         border-radius: 0.26em;
+     }
+
+     .btn:hover {
+         opacity: 0.8;
+         letter-spacing: .5px;
+         font-weight: bolder;
+     }
+
+     .btn-mb {
+         margin-top: 5px;
+     }
+ }
+
+
+ /* 2-media for small screens 950 to 1200  */
+
+ @media (min-width:950px) and (max-width:1200px) {
+
+
+     .main-li>a {
+         padding: 13.5px 25px;
+         font-size: 16.6px;
+     }
+
+     .lego a {
+         background-color: var(--mainColor);
+         padding: 13.5px 33px;
+     }
+
+     .fa-house {
+         font-size: 13px;
+         position: absolute;
+         left: 14px;
+         top: 17.5px;
+     }
+
+     .search {
+         margin-right: 18.5px;
+         border-radius: 4.4px;
+         padding: 6px 8.1px;
+         letter-spacing: .6px;
+     }
+
+     ::placeholder {
+         font-size: 1.24rem;
+     }
+
+     .main-box-model p {
+         line-height: 1.25;
+     }
+
+     .main-box-model a {
+         margin-right: 5px;
+         font-size: 19px;
+     }
+
+
+     /* ----------------------> */
+
+     .our-work {
+         padding: 15px;
+         height: 550px;
+         margin-top: 85px;
+     }
+
+     .left-our-work {
+         width: 22%;
+         height: 444px;
+         line-height: 1.25;
+     }
+
+     .left-our-work h2 {
+         font-size: 1.77rem;
+         margin-bottom: 10px;
+     }
+
+     .right-our-work {
+         width: 77.5%;
+
+     }
+
+     .right-our-work div {
+         height: 335px;
+         width: 31.78%;
+         border-radius: 5px;
+         height: 444px;
+     }
+
+
+     .right-our-work div img {
+         width: 100%;
+         height: 47%;
+         border-radius: 6px;
+     }
+
+     .right-our-work h3 {
+         font-size: 1.4rem;
+     }
+
+     .right-our-work p {
+         font-size: 1.05rem;
+         margin-top: 5.2px;
+         line-height: 1.4;
+     }
+
+
+     /* ----------------------> */
+
+     .plans {
+         display: flex;
+         justify-content: space-around;
+         flex-wrap: nowrap;
+         gap: 0px;
+         margin: 1.4em 0;
+     }
+
+ }
+
+
+
+
+
+ /* 3- medie for tab screens 650 to 949  */
+
+
+
+ /* =============
+ tablte screen medie
+===============*/
+
+
+ @media (min-width:650px) and (max-width:949px) {
+
+     .main-li>a {
+         padding: 14px 18.4px;
+         font-size: 16px;
+     }
+
+     .lego a {
+         padding: 16px 22.5px;
+     }
+
+     .fa-house {
+         font-size: 11.7px;
+         left: 5.9px;
+         top: 15.5px;
+     }
+
+     .drop-down::after {
+         right: 4px;
+         top: 44.34%;
+         border-width: 6.7px;
+     }
+
+     .sup-ul {
+         width: 117.5%;
+         border-radius: 6px;
+     }
+
+     .sup-ul li>a {
+         padding: 11.8px 17.8px;
+         font-size: 14px;
+     }
+
+     .right-header-search {
+         width: 28.4%;
+     }
+
+
+     .search {
+         margin-right: 11.3px;
+         padding: 6.7px;
+     }
+
+     .fa-magnifying-glass {
+         font-size: 18px;
+         margin-right: 12.9px;
+         cursor: pointer;
+     }
+
+     /* ------------------------------------------->>>>>>>>> */
+
+     .bottom-header>label a {
+         padding: 9px 15.6px;
+         font-size: 23px;
+         border-radius: 6.5px;
+         position: absolute;
+         bottom: 36.5px;
+         left: 21px;
+     }
+
+     .box-model {
+         height: 160px;
+         width: 55.5%;
+         position: absolute;
+         top: 31%;
+         left: 23.3%;
+     }
+
+     .main-box-model p {
+         line-height: 1.45;
+     }
+
+     .main-box-model a {
+         margin-right: 5px;
+         font-size: 19px;
+     }
+
+     /* ------------------------------------------->>>>>>>>> */
+
+     .team {
+         height: auto;
+         margin-top: 35px;
+
+     }
+
+     .up-team {
+         text-align: center;
+     }
+
+     .up-team>h2 {
+         font-size: 1.62rem;
+         margin: 23 px 0px 7.7px 0px;
+     }
+
+     .up-team p {
+         font-size: .98rem;
+         opacity: .788;
+     }
+
+     .down-team {
+         margin-top: 17px 0px;
+     }
+
+     .down-team h2 {
+         font-size: 1rem;
+     }
+
+     .down-team figure {
+         width: 120px;
+         height: 120px;
+         margin-bottom: 0px;
+
+     }
+
+     .down-team div {
+         margin-top: 27px;
+         width: 24%;
+         height: 175px;
+
+     }
+
+     .down-team div>P {
+         opacity: .8;
+         font-size: .9rem;
+     }
+
+     /* ----------------------------------------------------------> */
+     .our-work {
+         height: 500px;
+         margin-top: 92px;
+     }
+
+     .left-our-work {
+         width: 25%;
+         height: 377px;
+         line-height: 1.15;
+     }
+
+     .left-our-work h2 {
+         font-size: 1.74rem;
+         margin-bottom: 20px;
+     }
+
+     .left-our-work p {
+         font-size: .9rem;
+     }
+
+     .right-our-work {
+         width: 75%;
+
+     }
+
+     .right-our-work div {
+         width: 31.6%;
+         border-radius: 6px;
+         height: 364.8px;
+     }
+
+
+     .right-our-work>div:hover img {
+         height: 45.1%;
+     }
+
+     .right-our-work div img {
+         height: 44%;
+         border-radius: 6px;
+     }
+
+     .right-our-work h3 {
+         font-size: 1.25rem;
+         margin: 10px 0px;
+     }
+
+     .right-our-work p {
+         text-indent: 14px;
+         font-size: .99rem;
+         margin-top: 3.2px;
+         line-height: 1.4;
+     }
+
+     .right-our-work>div>p:first-of-type {
+         font-size: 1.21rem;
+         margin: 6.4px 0px;
+         opacity: .88;
+     }
+
+
+     /* ------------------------------------------->>>>>>>>> */
+
+     .pricing {
+
+         text-align: center;
+         margin-top: 28px;
+         height: auto;
+     }
+
+     .text-accent {
+         font-size: 2.1rem;
+         margin-top: 1.8em;
+         margin-bottom: 7.6px;
+     }
+
+     .fs-500 {
+         font-size: 1.1rem;
+         margin: 10px 0px;
+     }
+
+     .mb {
+         margin: .25em 0em 1em;
+     }
+
+     .plans {
+         flex-wrap: nowrap;
+         gap: 0px;
+         margin: .8em 0;
+         align-items: center;
+         align-content: center;
+     }
+
+     .plan {
+         width: 13.5rem;
+         padding: 1.4em;
+         margin: .5em 1.618em 1.1em;
+         height: 420px;
+     }
+
+     .plan-title {
+         text-transform: uppercase;
+         margin: 0 0 .69em;
+     }
+
+     .plan-price {
+         margin: 0;
+         font-size: 2rem;
+         line-height: 1;
+         font-weight: 900;
+     }
+
+     .plan-price span {
+         font-size: 1.262rem;
+     }
+
+     .plan-description>p {
+         margin: .67em 0;
+         line-height: 1.37;
+         font-size: 1.04rem;
+         font-weight: 600;
+         color: #000;
+         opacity: .85;
+         text-align: left;
+     }
+
+     .plan-description>span {
+         font-weight: 500;
+         opacity: .84;
+         position: relative;
+         top: -31.3px;
+         left: 54px;
+         font-size: .95rem;
+     }
+
+     .empty-1 {
+         height: 75px;
+     }
+
+     .contact {
+         height: 375px;
+     }
+
+     .left-contact {
+         height: 350px;
+         width: 38%;
+     }
+
+     .right-contact {
+         height: 375px;
+         width: 61.5%;
+         position: relative;
+         top: 4.7px;
+     }
+
+     .footer-img {
+         margin-top: 42px;
+     }
+
+     .left-contact h2 {
+         padding: 6.4px 0px;
+         margin: 8px 0px;
+         font-size: 1.31rem;
+     }
+
+     .left-contact h3 {
+         font-size: 1.17rem;
+         margin: 17px 0px 13px;
+         font-weight: 600;
+     }
+
+     .left-contact p:first-of-type {
+         margin: 8px 0px 12px;
+         font-size: 1.11rem;
+         opacity: .834;
+
+     }
+
+     .info {
+         margin: 8px 0px;
+         font-size: 1.02rem;
+         line-height: 1.65;
+         text-indent: 4px;
+     }
+
+     #submit {
+         margin: 17px 13.4px 3.3px 0px;
+         padding: 7.5px 5px;
+     }
+
+     .right-contact label {
+         font-size: 1.1rem;
+         font-weight: 500;
+         margin: 4.5px 0px 11.4px;
+
+     }
+
+     /* ------------------------------------------ */
+
+     .main-icons div i {
+         padding: 9.4px;
+     }
+
+     .main-icons div>i:hover {
+         padding: 9.65px;
+     }
+ }
+
+
+
+
+ /* -------------------------------------------------> */
+
+ /* =============
+ more tablte screen medie
+===============*/
+
+
+ /* 4-more medie for tab screens from 650 : 750 px */
+
+
+ @media (max-width:710px) {
+     .plans {
+         flex-wrap: wrap;
+     }
+
+     #submit {
+         font-size: .89rem;
+         margin: 15px 20px 4px;
+     }
+
+     #submit:hover {
+         opacity: .87;
+         letter-spacing: .16;
+         font-weight: 700;
+         font-size: .9rem;
+     }
+
+ }
+
+ @media (min-width:650px) and (max-width:750px) {
+     .main-li>a {
+         padding: 13.8px 16.5px;
+         font-size: 16px;
+     }
+
+     .lego a {
+         padding: 15.5px 20.22px;
+     }
+
+
+
+     .right-header-search {
+         width: 24.7%;
+     }
+
+
+     .search {
+         margin-right: 8.4px;
+         padding: 5.5px;
+     }
+
+     .left-our-work {
+         line-height: 1.07;
+     }
+
+     .left-our-work p {
+         font-size: .84;
+     }
+ }
+
+ /* ----------------------------------------------------------> */
+
+ @media (min-width:800px) and (max-width:949px) {
+
+     .main-li>a {
+         padding: 15.5px 19.5px;
+         font-size: 16px;
+     }
+
+     .lego a {
+         padding: 15.5px 23.7px;
+     }
+
+
+
+     .right-header-search {
+         width: 30.8%;
+     }
+
+
+     .search {
+         margin-right: 14.4px;
+         padding: 7px;
+     }
+
+
+     .left-our-work {
+         height: 385px;
+         line-height: 1.4;
+     }
+
+     .left-our-work p {
+         font-size: .94;
+     }
+
+     /* -------------------------------------> */
+
+     .text-accent {
+         font-size: 2.25rem;
+         font-weight: 800;
+         margin-top: 1.9em;
+         margin-bottom: 8.4px;
+     }
+
+     .plan {
+         width: 16.2rem;
+         padding: 1.8em;
+         border-radius: 1.09em;
+         margin: .5em 1.4em 1.1em;
+     }
+
+     .plan--accent .plan-description p {
+         font-weight: 500;
+     }
+
+     .plan-price {
+         font-size: 2.5rem;
+         line-height: 1.1;
+     }
+
+     .plan-price span {
+         font-size: 1.2625rem;
+     }
+
+     .plan-description>p {
+         line-height: 1.2;
+         font-size: 1rem;
+         font-weight: 700;
+     }
+
+     .plan-description>span {
+         font-weight: 400;
+         opacity: .87;
+         position: relative;
+         top: -29.8px;
+         left: 45px;
+         font-size: .94rem;
+     }
+
+     /* ------------------------------------------> */
+
+
+     .left-contact h2 {
+         font-size: 1.44rem;
+     }
+
+     .left-contact h3 {
+         font-size: 1.17 rem;
+         margin: 20px 0px 15px;
+     }
+
+     .left-contact p:first-of-type {
+         margin: 8px 0px 12px;
+         font-size: 1.11rem;
+         opacity: .87;
+     }
+
+     .info {
+         margin: 9px 0px;
+         font-size: 1.1rem;
+         line-height: 1.65;
+     }
+
+     .right-contact label {
+         font-size: 1.18rem;
+     }
+
+     #submit {
+         width: 16%;
+         padding: 9px 4px;
+         margin: 20px 12px 5px;
+         border-radius: 5px;
+     }
+
+ }
+
+
+ /* -------------------------------------> */
+
+
+ /* THE END STYLE  */

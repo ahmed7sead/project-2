@@ -1,0 +1,394 @@
+/* 
+
+=============
+ table of contents
+===============
+
+1- head for desktop and tablet
+1.1 img bottom head 
+1.2 box-model head
+
+2- anmie our-team
+
+3-anmie for head pohne
+3.1 animie icon manue
+3.2 animie sup div head
+
+
+/* --------------------------------------->>>>>>>>>> */
+
+
+/* ===============
+0. global style
+================ */
+
+* {
+    margin: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eeeeee;
+}
+
+::selection {
+    background-color: var(--mainColor);
+    color: var(--sColor);
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+/* ======================
+1- head for desktop and tablet
+================ */
+
+.head-main {
+    animation: head-main 1612ms 1;
+}
+
+@keyframes head-main {
+
+    from {
+        transform: translateY(-107%);
+
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.sup-ul {
+    animation: ul-show 700ms 1;
+}
+
+@keyframes ul-show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fa-magnifying-glass {
+    animation: glass-show 1655ms 1;
+    animation-timing-function: ease-out;
+}
+
+@keyframes glass-show {
+    0% {
+        opacity: 0;
+    }
+
+    85% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+.drop-down:hover::after {
+    animation-name: drop-down;
+    animation-duration: 277ms;
+    animation-timing-function: linear;
+    transition-property: visibility;
+    transition-delay: .185s;
+    visibility: hidden;
+}
+
+@keyframes drop-down {
+    to {
+        margin-top: 20px;
+        opacity: .4;
+    }
+}
+
+/* =================
+1.1 img bottom head 
+================ */
+
+.main-img,
+.bottom-header label {
+
+    animation-duration: .4s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-name: main-img;
+}
+
+@keyframes main-img {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ==========
+1.2 box-model head
+================ */
+
+
+#show-model:checked+div {
+    display: block;
+    animation-name: down-model;
+    animation-duration: 360s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+
+@keyframes down-model {
+    0% {
+        transform: translateY(-220%);
+    }
+
+    .288% {
+        transform: translate(0%);
+    }
+
+    1.556% {
+        opacity: 1;
+    }
+
+    1.62% {
+        opacity: .8;
+        transform: translate(0%);
+    }
+
+    1.68% {
+        opacity: .5;
+        transform: translate(0%);
+    }
+
+    1.72% {
+        opacity: .35;
+        transform: translate(0%);
+
+    }
+
+    1.735% {
+        opacity: 0;
+        transform: translateY(-220%);
+    }
+
+}
+
+
+/* =================
+2- anmie our-team
+================ */
+
+
+.down-team figure::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 100%);
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+
+.down-team figure:hover::before {
+    -webkit-animation: shine 0.75s;
+    animation: shine 0.75s;
+
+}
+
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+
+
+/* ========================
+3-anmie for head pohne
+=====================*/
+
+.head-mobile {
+    animation: head-main 808ms 1;
+}
+
+@keyframes head-main {
+
+    from {
+        transform: translateY(-107%);
+
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.head-mobile h1 {
+    animation: h1-mobile 3.16s 1;
+    animation-duration: liner;
+}
+
+@keyframes h1-mobile {
+    0% {
+        transform: translatex(-48%);
+        color: var(--mainColor);
+    }
+
+    75% {
+        transform: translateX(19.5%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.fa-house {
+    animation: house 3.08s 1;
+    animation-duration: liner;
+}
+
+@keyframes house {
+    from {
+        color: var(--mainColor);
+    }
+}
+
+
+
+/* =================
+3.1 animie icon manue
+================ */
+
+.menu {
+    --mWidt: 25px;
+
+    height: var(--mWidt);
+    aspect-ratio: 1;
+    border: none;
+    padding: 0;
+    border-inline: calc(var(--mWidt)/2) solid #0000;
+    box-sizing: content-box;
+    --_g1: linear-gradient(var(--sColor) 20%, #0000 0 80%, var(--sColor) 0) no-repeat content-box border-box;
+    --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--sColor) 95%, #0000) repeat-y content-box border-box;
+    background:
+        var(--_g2) left var(--_p, 0px) top,
+        var(--_g1) left calc(var(--mWidt)/10 + var(--_p, 0px)) top,
+        var(--_g2) right var(--_p, 0px) top,
+        var(--_g1) right calc(var(--mWidt)/10 + var(--_p, 0px)) top;
+    background-size:
+        20% 80%,
+        40% 100%;
+    position: relative;
+    clip-path: inset(0 25%);
+    cursor: pointer;
+    transition:
+        background-position .3s var(--_s, .3s),
+        clip-path 0s var(--_s, .6s);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-mask: linear-gradient(90deg, #0000, #000 25% 75%, #0000);
+    position: absolute;
+    top: 11px;
+    right: 11px;
+}
+
+.menu:before,
+.menu:after {
+    content: "";
+    position: absolute;
+    border-radius: var(--mWidt);
+    inset: 40% 0;
+    background: var(--sColor);
+    transition: transform .3s calc(.3s - var(--_s, .3s));
+}
+
+.menu:checked {
+    clip-path: inset(0);
+    --_p: calc(-1*var(--mWidt));
+    --_s: 0s;
+}
+
+.menu:checked:before {
+    transform: rotate(45deg);
+}
+
+.menu:checked:after {
+    transform: rotate(-45deg);
+}
+
+.menu:focus-visible {
+    clip-path: none;
+    border: none;
+    outline: 2px solid var(--sColor);
+    outline-offset: 5px;
+    -webkit-mask: none;
+}
+
+/* END  3.1 animie icon manue */
+
+
+
+
+/* ==================
+3.2 animie sup div head
+================= */
+
+
+.main-menu,
+.sub-menu {
+    animation: menu 1s 1;
+}
+
+@keyframes menu {
+    0% {
+        transform: translateX(125px);
+        opacity: .95;
+    }
+
+    68.5% {
+        transform: translateX(-55px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project</title>
+
+    <!-- style sheet -->
+
+    <!-- تست ستايل شيت وهو لتجربة الميديا كويري  خصوصا التاب والبيح سكرين مور ذان 1800بيكسل -->
+    <!-- <link rel="stylesheet" test.css" media="(min-width:650px) and (mix-width 1000px)" /> -->
+
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="styles/main-style.css"
+      media="(min-width : 650px)"
+    />
+
+    <link rel="stylesheet" href="styles/anime.css" />
+    <link
+      rel="stylesheet"
+      href="styles/phone-style.css"
+      media="(max-width : 649px)"
+    />
+
+    <!-- font google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo&family=Jomhuria&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- star header for main-screens  -->
+
+    <header class="head-main">
+      <ul class="main-ul">
+        <li class="main-li lego">
+          <a href="#"><i class="fa-solid fa-house"></i>lego</a>
+        </li>
+        <li class="main-li"><a href="#team">team</a></li>
+        <li class="main-li"><a href="#work">work</a></li>
+        <li class="main-li"><a href="#price">price</a></li>
+        <li class="main-li"><a href="#contact">contact</a></li>
+        <li class="main-li drop-down">
+          <ul class="sup-ul">
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+          </ul>
+          <a href="#">dropdown</a>
+        </li>
+      </ul>
+      <div class="right-header-search">
+        <label for="search-show"
+          ><i class="fa-solid fa-magnifying-glass"></i
+        ></label>
+        <input type="checkbox" name="clicked-search-times" id="search-show" />
+        <input type="search" class="search" placeholder="Search here ..." />
+      </div>
+    </header>
+    <!-- END header for main-screens  -->
+
+    <!-- star header for mobile-screens  -->
+    <header class="head-mobile">
+      <h1><i class="fa-solid fa-house"></i> Lego</h1>
+      <label for="show-menu"><div></div></label>
+      <input
+        type="checkbox"
+        role="button"
+        aria-label="Display the menu"
+        class="menu"
+        id="show-menu"
+      />
+      <!-- the menu head moblie -->
+      <div class="main-menu">
+        <div><a href="#team">Team</a></div>
+        <div><a href="#work">Work</a></div>
+        <div><a href="#price">Price</a></div>
+        <div><a href="#contact">Contact</a></div>
+        <div>
+          <a href="">drop-down</a>
+          <label for="show-sub-menu"> <i class="fa-solid fa-plus"></i> </label>
+          <input type="checkbox" id="show-sub-menu" />
+
+          <ul class="sub-menu">
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+          </ul>
+        </div>
+        <div>
+          <a href="#">Search</a>
+          <section class="container">
+            <input
+              placeholder="Search..."
+              class="js-search"
+              type="search"
+              id="sr"
+            />
+            <i class="fa fa-search"></i>
+          </section>
+        </div>
+      </div>
+    </header>
+    <!-- END header for mobile-screens  -->
+
+    <!-- start bottom header -->
+    <section class="bottom-header" id="top">
+      <img src="images/sailboat.jpg" alt="main-img" class="main-img" />
+      <label for="show-model"> <a>LEARN CSS</a> </label>
+      <input type="checkbox" id="show-model" />
+      <div class="box-model" dir="rtl">
+        <label for="show-model">
+          <i class="fa-solid fa-x"></i>
+        </label>
+        <p class="head-box-model">هناك العديد من المصادر لتعلم الCSS</p>
+        <div class="main-box-model">
+          <p>لكني انصحك بقناة اتعلم في ساعة</p>
+          <p>
+            يمكنك الذهاب عن طريق هذا الرابط
+            <a href="https://elzero.org/">Elzero Web Shcool</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- END bottom header -->
+
+    <!-- start our team -->
+    <i id="team"></i>
+    <section class="team">
+      <div class="up-team">
+        <h2>our team</h2>
+        <p>meet the team - our office rats :</p>
+      </div>
+      <div class="down-team">
+        <div>
+          <figure>
+            <img src="images/avatar/xZ4wg2Xj.jpg" alt="avatar-profile" />
+          </figure>
+          <h2>jhony Walker</h2>
+          <p>Web Designer</p>
+        </div>
+        <div>
+          <figure>
+            <img
+              src="images/avatar/photo-1568602471122-7832951cc4c5.jpg"
+              alt="avatar-profile"
+            />
+          </figure>
+          <h2>robart Jr</h2>
+          <p>supprot</p>
+        </div>
+
+        <div>
+          <figure>
+            <img
+              src="images/avatar/leonard-thiele.256x256.jpg"
+              alt="avatar-profile"
+            />
+          </figure>
+          <h2>jhony rango</h2>
+          <p>boss</p>
+        </div>
+
+        <div>
+          <figure>
+            <img
+              src="images/avatar/avatar-384617-024681png.png"
+              alt="avatar-profile"
+            />
+          </figure>
+          <h2>Rebecca tomas</h2>
+          <p>Fixer</p>
+        </div>
+      </div>
+    </section>
+    <!-- END our team -->
+
+    <!-- start our work -->
+    <section class="our-work" id="work">
+      <div class="left-our-work">
+        <h2>Our Work</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+          deleniti unde maiores quo aperiam ut numquam! Tenetur incidunt placeat
+          quos fuga. Sapiente commodi, quas sequi natus recusandae vel accusamus
+          nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Officia deleniti unde maiores quo aperiam ut numquam! Tenetur incidunt
+          placeat quos fuga. Sapiente commodi, quas sequi natus recusandae vel
+          accusamus nostrum. nostrum. Lorem ipsum dolor sit consectetur
+          adipisicing elit.
+        </p>
+      </div>
+      <div class="right-our-work">
+        <div>
+          <img src="images/snow.jpg" alt="customer work" />
+          <h3>Customer 1</h3>
+          <p>trade</p>
+          <p>Blablabla</p>
+          <p>Blablabla</p>
+          <p>Blablabla</p>
+          <p>Blablabla</p>
+        </div>
+        <div class="test-1">
+          <img src="images/lights.jpg" alt="customer work" />
+          <h3>Customer 2</h3>
+          <p>trade</p>
+          <p>Blablabla</p>
+          <p>Blablabla</p>
+          <p>Blablabla</p>
+          <p>Blablabla</p>
+        </div>
+        <div class="test">
+          <img src="images/mountains.jpg" alt="customer work" />
+          <h3>Customer 3</h3>
+          <p>trade</p>
+          <p>Blablabla</p>
+          <p>Blablabla</p>
+          <p>Blablabla</p>
+          <p>Blablabla</p>
+        </div>
+      </div>
+    </section>
+    <!-- END our work -->
+
+    <!-- start pricing -->
+
+    <i id="price"></i>
+    <section class="pricing">
+      <h2 class="text-accent">pricing</h2>
+      <p class="fs-500">Choose a pricing plan that fits your needs.</p>
+
+      <div class="plans">
+        <div class="plan plan--light">
+          <h3 class="plan-title">basic</h3>
+
+          <p class="plan-price">$9.99<span>/month</span></p>
+
+          <div class="plan-description">
+            <p>Storage :</p>
+            <span>10GB</span>
+            <p>Emails :</p>
+            <span>10</span>
+            <p>Domains</p>
+            <span>10</span>
+            <p>Endless</p>
+            <span>Support :</span>
+          </div>
+
+          <a href="#join" class="btn"
+            ><i class="fa-solid fa-check"></i>&nbsp; Join now</a
+          >
+        </div>
+
+        <div class="plan plan--accent">
+          <h3 class="plan-title">super Pro</h3>
+
+          <p class="plan-price">$24.99<span>/month</span></p>
+
+          <div class="plan-description">
+            <p>Storage :</p>
+            <span>25GB</span>
+            <p>Emails</p>
+            <span>25</span>
+            <p>Domains :</p>
+            <span>25</span>
+            <p>Endless :</p>
+            <span>Support</span>
+          </div>
+          <a href="#join" class="btn"
+            ><i class="fa-solid fa-check"></i>&nbsp; Join now</a
+          >
+        </div>
+
+        <div class="plan plan--light">
+          <h3 class="plan-title">Premium</h3>
+
+          <p class="plan-price">$49.99<span>/month</span></p>
+
+          <div class="plan-description">
+            <p>Storage :</p>
+            <span>50GB</span>
+            <p>Emails</p>
+            <span>50</span>
+            <p>Domains :</p>
+            <span>50</span>
+            <p>Endless :</p>
+            <span>Support</span>
+          </div>
+
+          <a href="#join" class="btn"
+            ><i class="fa-solid fa-check"></i>&nbsp; Join now</a
+          >
+        </div>
+      </div>
+
+      <p class="fs-500 mb">Need something different? No problem!</p>
+      <a href="#contact" class="btn btn-mb">Get in touch</a>
+    </section>
+    <!-- END pricing -->
+
+    <!-- start contact US  -->
+    <div class="empty-1" id="contact"></div>
+    <section class="contact">
+      <div class="left-contact">
+        <h2>Contact Us</h2>
+        <h3>Address</h3>
+        <p>Elsalam city</p>
+        <p class="info">
+          <i class="fa-solid fa-location-dot"></i>&nbsp;cairo, EG
+        </p>
+        <p class="info">
+          <i class="fa-solid fa-phone"></i>&nbsp;<a href="tel:01557646755"
+            >01557646755</a
+          >
+        </p>
+        <p class="info">
+          <i class="fa-regular fa-envelope"></i>&nbsp;<a
+            href="mailto:asda@gmail.com"
+            >asd@teat.com</a
+          >
+          <i id="join"></i>
+        </p>
+      </div>
+      <div class="right-contact">
+        <form action="test.php" method="post" name="from-test">
+          <div>
+            <label for="user"> Name &nbsp;<span>*</span></label>
+            <input
+              type="text"
+              placeholder="User Name"
+              required
+              minlength="5"
+              maxlength="24"
+              name="userName"
+              id="user"
+            />
+          </div>
+          <div>
+            <label for="Email">Email &nbsp;<span>*</span></label>
+            <input
+              type="email"
+              placeholder="write your Email"
+              required
+              minlength="5"
+              maxlength="99"
+              name="email"
+              id="Email"
+            />
+          </div>
+
+          <div>
+            <label for="password">password &nbsp;<span>*</span></label>
+            <input
+              type="password"
+              placeholder="write password"
+              required
+              minlength="5"
+              maxlength="99"
+              name="password"
+              id="password"
+            />
+          </div>
+          <div>
+            <input type="submit" value="Sign Up" id="submit" />
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- END contact -->
+    <!-- start footer -->
+    <img src="images/map.jpg" alt="" class="footer-img" />
+    <footer>
+      <h3>Fllow Us</h3>
+      <div class="main-icons">
+        <div><i class="fa-brands fa-facebook"></i></div>
+        <div><i class="fa-brands fa-twitter"></i></div>
+        <div><i class="fa-brands fa-google-plus-g"></i></div>
+        <div><i class="fa-brands fa-instagram"></i></div>
+        <div><i class="fa-brands fa-linkedin-in"></i></div>
+      </div>
+      <p>Designed By <span>Ahmed Saeed</span> &copy;2023</p>
+      <a href="#top" title="Go to top page"
+        ><i class="fa-solid fa-circle-chevron-up"></i
+      ></a>
+    </footer>
+    <!-- END footer -->
+  </body>
+</html>
