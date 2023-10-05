@@ -810,7 +810,7 @@ end content
  }
 
  .right-contact input:focus {
-     transition: .68s;
+     transition: .52s;
      border: 2px solid var(--mainColor);
  }
 
