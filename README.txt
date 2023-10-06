@@ -3,7 +3,7 @@
 
 Website link :   https://ahmed7sead.github.io/project-2/
 
-author Templte:  ahmed sead
+author Templte:  ahmed seaad
 
 
 
