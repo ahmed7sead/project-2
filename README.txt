@@ -60,8 +60,10 @@ the styles website :
 1.2 = main-style.css
 1.3 = phone-style.css
 1.4 = normalize.css
-
 1.4: It is a file of general formats imported from: https://necolas.github.io/normalize.css/
+
+
+Original site written by w3 You can compare : https://www.w3schools.com/w3css/tryw3css_templates_website.htm#myPage
 
 
 
